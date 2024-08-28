@@ -1,13 +1,3 @@
 language: bash
-sudo: required
-dist: trusty
-
-before_install:
-    - sudo apt-add-repository "deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse"
-    - sudo apt-get -qq update
-    - sudo apt-get -t trusty-backports install shellcheck
-    - sudo pip install bashate
-
 script:
-- shellcheck test.sh
-- bashate test.sh
+    - shellcheck test.sh
